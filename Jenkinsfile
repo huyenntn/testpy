@@ -10,7 +10,7 @@ pipeline {
       steps {
       container('maven') {  
 		  sh '''
-          echo pwd
+          pwd
           '''
        }    
       }
@@ -20,7 +20,7 @@ pipeline {
         container('kaniko') {
           sh '''
 		  cat /kaniko/.docker/config.json
-		  /kaniko/executor --context . --destination huyenntnptit/kaniko-demo-image:1.0
+		  /kaniko/executor --context pwd --destination huyenntnptit/kaniko-demo-image:1.0
           '''
         }
       }
