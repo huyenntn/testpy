@@ -5,8 +5,8 @@ metadata:
 spec:
   containers:
    - name: kaniko
-      image: gcr.io/kaniko-project/executor:debug
-      command: ["sleep", "1d"]
+     image: gcr.io/kaniko-project/executor:debug
+     command: ["sleep", "1d"]
    - name: maven
      image: maven:3.8.1-jdk-8
      command: ["sleep", "1d"]
