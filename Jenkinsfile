@@ -6,10 +6,17 @@ pipeline {
     }
   }
   stages {
-    stage('Build maven code') {
+    stage('Build python code') {
       steps {
       container('pythoncontainer') {  
           sh "python test.py"
+       }    
+      }
+    }
+	stage('Build maven code') {
+      steps {
+      container('mavencontainer') {  
+          sh "mvn clean install"
        }    
       }
     }

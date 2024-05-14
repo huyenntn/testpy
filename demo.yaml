@@ -4,6 +4,9 @@ metadata:
   name: sarva-test
 spec:
   containers:
+   - name: mavencontainer
+     image: maven:3.8-jdk-8-slim
+     command: ["sleep", "43200"]
    - name: pythoncontainer
      image: python:latest
      command: ["sleep", "43200"]
