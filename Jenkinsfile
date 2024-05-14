@@ -19,7 +19,7 @@ pipeline {
       steps {
         container('kaniko') {
           sh '''
-		  cat /kaniko/.docker
+		  ls /kaniko/.docker
 		  /kaniko/executor --context . --destination huyenntnptit/kaniko-demo-image:1.0
           '''
         }
