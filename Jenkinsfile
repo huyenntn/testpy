@@ -16,8 +16,11 @@ pipeline {
 	stage('Build maven code') {
       steps {
       container('mavencontainer') {  
-		  sh "cd /app"
+		  sh '''
+		  ls
+		  cd app
           sh "mvn clean install"
+		  '''
        }    
       }
     }
