@@ -6,16 +6,10 @@ spec:
   containers:
    - name: maven
      image: maven:3.8.1-jdk-8
-     command:
-      - sleep
-     args:
-      - 99d
+     command: ["sleep", "43200"]
    - name: kaniko
      image: gcr.io/kaniko-project/executor:debug
-     command:
-      - sleep
-     args:
-      - 9999999
+     command: ["sleep", "43200"]
      volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
