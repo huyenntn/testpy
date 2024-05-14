@@ -8,18 +8,9 @@ pipeline {
   stages {
     stage('Build maven code') {
       steps {
-      container('mavencontainer') {  
-          sh "mvn clean install"
+      container('pythoncontainer') {  
+          sh "python test.py"
        }    
-      }
-    }
-    stage('Build docker image') {
-      steps {
-        container('dockercontainer') {
-          sh '''
-          docker build -t jsarvabhowma/demoapp:v1 .
-          '''
-        }
       }
     }
   }
