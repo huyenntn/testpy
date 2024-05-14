@@ -16,6 +16,7 @@ pipeline {
 	stage('Build maven code') {
       steps {
       container('mavencontainer') {  
+		  sh "cd /app"
           sh "mvn clean install"
        }    
       }
