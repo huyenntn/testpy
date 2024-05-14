@@ -19,7 +19,7 @@ pipeline {
 		  sh '''
 		  ls
 		  cd app
-          sh "mvn clean install"
+          mvn clean install
 		  '''
        }    
       }
