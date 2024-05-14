@@ -13,5 +13,14 @@ pipeline {
        }    
       }
     }
+    stage('Build docker image') {
+      steps {
+        container('dockercontainer') {
+          sh '''
+          docker --version
+          '''
+        }
+      }
+    }
   }
 }
