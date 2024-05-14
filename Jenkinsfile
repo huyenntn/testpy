@@ -29,10 +29,9 @@ pipeline {
       steps {
         container('dockercontainer') {
           sh '''
-		  docker login registry.vnpay.vn --username "vhud" --password "EBtNhJ4Sc98r+yf+"
+		  docker login -u "huyenntnptit" -p "Chiphoi135!"
 		  docker build -t huyenntn/demoapp:v1 .
-		  docker tag huyenntn/demoapp:v1 registry.vnpay.vn/vhud/maven-demo:v1
-		  docker push registry.vnpay.vn/vhud/maven-demo:v1
+		  docker push huyenntn/demoapp:v1
           '''
         }
       }
