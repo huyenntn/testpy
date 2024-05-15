@@ -21,7 +21,7 @@ pipeline {
           sh '''
 		  cat /kaniko/.docker/config.json
 		  ls app/
-		  /kaniko/executor --context app/ --no-push
+		  /kaniko/executor --context app/ --destination huyenntnptit/app-demo:v2
           '''
         }
       }
