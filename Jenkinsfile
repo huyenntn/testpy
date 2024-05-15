@@ -19,6 +19,7 @@ pipeline {
       steps {
         container('kaniko') {
           sh '''
+		  docker --version
 		  cat /kaniko/.docker/config.json
 		  /kaniko/executor --context . --destination huyenntnptit/huyenntn:1.0
           '''
