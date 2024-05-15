@@ -20,6 +20,8 @@ pipeline {
         container('kaniko') {
           sh '''
 		  cat /kaniko/.docker/config.json
+		  ls
+		  ls /app
 		  /kaniko/executor --context . --no-push
           '''
         }
