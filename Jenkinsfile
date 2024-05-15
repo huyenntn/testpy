@@ -19,12 +19,20 @@ pipeline {
       steps {
         container('kaniko') {
           sh '''
-		  docker --version
 		  cat /kaniko/.docker/config.json
 		  /kaniko/executor --context . --destination huyenntnptit/huyenntn:1.0
           '''
         }
       }
     }
+	stage('Get docker image') {
+      steps {
+        container('dockercontainer') {
+          sh '''
+          docker images
+          '''
+        }
+      }
+	}
   }
 }
