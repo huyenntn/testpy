@@ -21,7 +21,7 @@ pipeline {
           sh '''
 		  cat /kaniko/.docker/config.json
 		  ls
-		  /kaniko/executor --context . --destination=huyenntnptit/kaniko-demo-image:1.0
+		  /kaniko/executor --context . --destination=huyenntnptit/kaniko-demo-image:2.0
           '''
         }
       }
