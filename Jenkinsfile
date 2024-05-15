@@ -20,7 +20,7 @@ pipeline {
         container('kaniko') {
           sh '''
 		  cat /kaniko/.docker/config.json
-		  /kaniko/executor --context . --destination huyenntnptit/huyenntn:1.0
+		  /kaniko/executor --context .
           '''
         }
       }
