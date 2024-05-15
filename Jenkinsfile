@@ -26,14 +26,5 @@ pipeline {
         }
       }
     }
-	stage('Get docker image') {
-      steps {
-        container('dockercontainer') {
-          sh '''
-          docker images
-          '''
-        }
-      }
-	}
   }
 }
